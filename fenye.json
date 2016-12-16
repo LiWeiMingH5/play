@@ -1,0 +1,81 @@
+[{
+	"shopname":"小霸王游戏机",
+	"shopprice":"99",
+	"shopmessage":"小霸王电视游戏机D101 8位FC插黄卡80后怀旧经典复古红白机珍藏版 亲子互动双手柄 纪念版红白机+400合一套餐",
+	"shopimgsmall1":"img/bawang1.jpg",
+	"shopimgsmall2":"img/bawang2.jpg",
+	"shopimgsmall3":"img/bawang3.jpg",
+	"shop":"品山水数码专营店",
+	"shopadress":"甘肃"
+	},{
+		"shopname":"psp游戏机",
+		"shopprice":"168",
+		"shopmessage":"小霸王掌机PSP游戏机 4.3英寸触摸屏街机万款经典游戏内置可下载儿童玩具GBA PS3 黑色8G版",
+		"shopimgsmall1":"img/pp1.jpg",
+		"shopimgsmall2":"img/pp2.jpg",
+		"shopimgsmall3":"img/pp3.jpg",
+		"shop":"罗果游戏影音专营店",
+		"shopadress":"大连"
+	},
+	{
+		"shopname":"索尼ps4",
+		"shopprice":"1688",
+		"shopmessage":"索尼（SONY）【新PS4国行主机】新 PlayStation 4 电脑娱乐游戏主机 1TB（黑色）",
+		"shopimgsmall1":"img/pl1.jpg",
+		"shopimgsmall2":"img/pl2.jpg",
+		"shopimgsmall3":"img/pl3.jpg",
+		"shop":"PlayStation京东官方旗舰店",
+		"shopadress":"北京"
+	},
+	{
+		"shopname":"列普勒ps4貼膜",
+		"shopprice":"45",
+		"shopmessage":"利乐普 PS4 PS4SLIM时尚个性机身贴纸 游戏主题主机高清镜面防刮防划痕保贴贴膜痛贴 白碳纤",
+		"shopimgsmall1":"img/lipl1.jpg",
+		"shopimgsmall2":"img/lipl1.jpg",
+		"shopimgsmall3":"img/lipl1.jpg",
+		"shop":"利乐普电玩专营店",
+		"shopadress":"南京"
+	},
+	{
+		"shopname":"小霸王ps4 4.3英寸",
+		"shopprice":"199",
+		"shopmessage":"小霸王掌机PSP游戏机 4.3英寸触摸屏街机万款经典游戏内置可下载儿童玩具GBA PS3 白色8G版+8G卡",
+		"shopimgsmall1":"img/xp1.jpg",
+		"shopimgsmall2":"img/xp2.jpg",
+		"shopimgsmall3":"img/xp3.jpg",
+		"shop":"利乐普电玩专营店",
+		"shopadress":"重庆"	
+	},
+	{
+
+		"shopname":"索尼游戏手柄(黑色）",
+		"shopprice":"380",
+		"shopmessage":"索尼（SONY）【PS4官方配件】PlayStation 4 游戏手柄（黑色）2016年新型号索尼（SONY）【PS4官方配件】PlayStation 4 游戏手柄（黑色）2016年新型号索尼（SONY）【PS4官方配件】PlayStation 4 游戏手柄（黑色）2016年新型号索尼（SONY）【PS4官方配件】PlayStation 4 游戏手柄（黑色）2016年新型号索尼（SONY）【PS4官方配件】PlayStation 4 游戏手柄（黑色）2016年新型号分享 关注商品举报索尼（SONY）【PS4官方配件】PlayStation 4 游戏手柄（黑色）2016年新型号",
+		"shopimgsmall1":"img/heisb1.jpg",
+		"shopimgsmall2":"img/heisb2.jpg",
+		"shopimgsmall3":"img/heisb3.jpg",
+		"shop":"PlayStation京东官方旗舰店",
+		"shopadress":"深圳"	
+	},
+	{
+		"shopname":"ps4主机直立支架（黑色）",
+		"shopprice":"99",
+		"shopmessage":"PS4 slim 游戏机直立底座支架 ps4 slim二合一主机风扇+座充",
+		"shopimgsmall1":"img/lj1.jpg",
+		"shopimgsmall2":"img/lj2.jpg",
+		"shopimgsmall3":"img/lj3.jpg",
+		"shop":"TT游戏专营店",
+		"shopadress":"抚顺"		
+	},
+	{
+		"shopname":"游戏光盘（绝地潜兵）",
+		"shopprice":"168",
+		"shopmessage":"索尼（SONY）【PS4国行游戏】绝地潜兵索尼（SONY）【PS4国行游戏】绝地潜兵索尼（SONY）【PS4国行游戏】绝地潜兵",
+		"shopimgsmall1":"img/qb1.jpg",
+		"shopimgsmall2":"img/qb2.jpg",
+		"shopimgsmall3":"img/qb3.jpg",
+		"shop":"PlayStation京东官方旗舰店",
+		"shopadress":"安徽"			
+	}
+	]

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="css/jquery.galleryview-3.0-dev.css" />-->
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function() {
+				$("#loadtop").load("头部.html");
+				$("#loadfoot").load("尾部.html");
+			});
+			$(function() {
+				var p_id = sessionStorage.getItem("p_id");
+				var uri = "http://10.2.153.112:8888/products" + p_id;
+				var userid = sessionStorage.getItem("userid");
+				$.ajax({
+					type: "get",
+					url: uri,
+					async: true,
+					success: function(data) {
+						var pic1 = data.img1;
+						var pic2 = data.img2;
+						var pic3 = data.img3;
+						var txt1 = data.p_detail;
+						var txt2 = data.price;
+						var txt3 = data.shopname;
+						var txt4 = data.shopaddress;
+						console.log(pic1);
+						$("#img1").attr("src", pic1);
+						$("#img2").attr("src", pic2);
+						$("#img2").hover(function() {
+							$("#img1").attr("src", pic2);
+						});
+
+						$("#img3").attr("src", pic3);
+						$("#img3").hover(function() {
+							$("#img1").attr("src", pic3);
+						});
+
+						$("#img4").attr("src", pic1);
+						$("#img4").hover(function() {
+							$("#img1").attr("src", pic1);
+						});
+						$("#p1").text(txt1);
+						$("#p2").text("销售价" + txt2 + "元");
+						$("#p3").text("店铺：" + txt3);
+						$("#p4").text("卖家地址:" + txt4);
+
+					},
+					error: function() {
+						alert("错误");
+					}
+				});
+				var shopcar = sessionStorage.getItem('shopcar');
+				$("#btn2").click(function() {
+					if(userid != null) {
+						$.ajax({
+							type: "get",
+							url: "http://10.2.153.112:8888/shopcar",
+							async: true,
+							data: {
+								"p_id": p_id,
+								"userid": userid
+							},
+							success: function(data) {
+								if(data) {
+									shopcar++;
+									sessionStorage.setItem("shopcar", shopcar);
+									$("#loadtop").load("头部.html");
+									alert("添加成功");
+								}
+							},
+							error: function() {
+								alert("添加失败");
+							}
+						})
+					}
+
+				})
+			});
+		</script>
+		<style>
+			#message {
+				height: 558px;
+				width: 1349px;
+			}
+			
+			#message1 {
+				height: 558px;
+				width: 489px;
+				float: left;
+			}
+			
+			#message1_1 {
+				height: 500px;
+				width: 489px;
+				background-color: white;
+				position: relative;
+			}
+			
+			#message1_2 {
+				height: 58px;
+				width: 489px;
+				background-color: white;
+			}
+			
+			#message2 {
+				height: 558px;
+				width: 860px;
+				background-color: white;
+				float: left;
+			}
+			
+			#img1 {
+				height: 300px;
+				width: 389px;
+				position: absolute;
+				top: 90px;
+				left: 60px;
+			}
+			
+			#img2 {
+				height: 55px;
+				width: 55px;
+				float: left;
+				margin-left: 60px;
+				border: 1px solid darkred;
+			}
+			
+			#img3 {
+				height: 55px;
+				width: 55px;
+				float: left;
+				margin-left: 60px;
+				border: 1px solid darkred;
+			}
+			
+			#img4 {
+				height: 55px;
+				width: 55px;
+				float: left;
+				margin-left: 60px;
+				border: 1px solid darkred;
+			}
+			
+			#p1 {
+				height: 111px;
+				width: 100%;
+				color: orange;
+				font-size: 16px;
+				text-align: center;
+				line-height: 139px;
+			}
+			
+			#p2 {
+				height: 111px;
+				width: 100%;
+				text-align: center;
+				line-height: 139px;
+				color: red;
+			}
+			
+			#p3 {
+				height: 111px;
+				width: 100%;
+				text-align: center;
+				line-height: 139px;
+				font-size: 22px;
+			}
+			
+			#p4 {
+				height: 111px;
+				width: 100%;
+				text-align: center;
+				line-height: 139px;
+				font-size: 22px;
+			}
+			
+			.button1 {
+				height: 38px;
+				width: 137px;
+				background-color: red;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="loadtop"></div>
+		<div id="message">
+			<div id="message1">
+				<div id="message1_1">
+					<img id="img1" />
+				</div>
+				<div id="message1_2">
+					<a href=""><img id="img2" /></a>
+					<a href=""><img id="img3" /></a>
+					<a href=""><img id="img4" /></a>
+				</div>
+			</div>
+			<div id="message2">
+				<p id="p1"></p>
+				<p id="p2"></p>
+				<p id="p3"></p>
+				<p id="p4">
+
+				</p>
+				<p id="p5">
+					<button class="button1" id="btn1">立即购买</button>
+					<button class="button1" id="btn2">加入购物车</button>
+				</p>
+			</div>
+		</div>
+		<div id="loadfoot"></div>
+	</body>
+
+</html>

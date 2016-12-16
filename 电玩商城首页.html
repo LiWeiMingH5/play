@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-family: "微软雅黑";
+			}
+			
+			a{
+				text-decoration: none;
+			}
+			
+			li{
+				list-style-type: none;
+			}
+			#top{
+				margin-bottom: 60px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			.container {
+				width: 1140px;
+				padding-right: 15px;
+				padding-left: 15px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			
+			.top-grid {
+				padding: 16px 0;
+				border-bottom: 1px solid #DEDEDE;
+			}
+			.top-grid ul{
+				padding: 16px 0;
+			}
+			.top-grid ul li{
+				display: inline-block;
+				font-size: 14px;
+				color: #999;
+				margin: 0 1em;
+			}
+			.top-grid ul li a{
+				color: #999;
+			}
+			.gridiocn{
+				position: relative;
+			    top: 1px;
+			    display: inline-block;
+				width: 14px;
+				height: 14px;
+				background-image: url(img/girdicon.png);
+			}
+			.gridiocn-mail{
+				background-position: -10px -108px;
+			}
+			.gridiocn-phone{
+				background-position: -160px -60px;
+			}
+			.top-nav{
+				padding: 16px 0 32px;
+			}
+			.top-nav-left{
+				float: left;
+				width: 300px;
+			}
+			.top-nav-left span{
+				font-size: 14px;
+				margin-left: 40px;
+			}
+			.top-nav-right{
+				float: left;
+			}
+			.top-nav-right li{
+				float: left;
+				margin-right: 40px;
+			}
+			.top-nav-right a{
+				color: #141414;
+			}
+			.top-nav-right a:hover{
+				color: #d8703f;
+			}
+			#banner{
+				position: relative;
+				width: 1360px;
+				height: 853px;
+				margin: 0 auto;
+			}
+			#banner img{
+				position: absolute;
+				width: 1360px;
+				height: 853px;
+				left: 0;
+				top: 0px;
+				z-index: 1;
+			}
+			#banner span{
+				font-size: 60px;
+				font-weight: bold;
+			}
+			.banner-content{
+				position: absolute;
+				z-index: 10;
+				top: 120px;
+				left: 250px;
+			}
+			.banner-right{
+				color: white;
+			}
+			#shownews{
+				width: 1360px;
+				padding: 50px 0;
+				background-color: #F7F7F9;
+			}
+			#shownews-pic{
+				width: 1140px;
+				margin-right: auto;
+				margin-left: auto;
+				padding: 15px 0;
+				height: 415px;
+				
+			}
+			.news{
+				float: left;
+				width: 366px;
+				height: 415px;
+			}
+			.shownews-white{
+				float: left;
+				width: 21px;
+				height: 415px;
+			}
+			.news-left{
+				background-image: url(img/ps4.png);
+			}
+			.new-top,.news-bottom{
+				width: 100%;
+				height: 200px;
+			}
+			.new-top{
+				margin-bottom: 15px;
+				background-image: url(img/ff15.png);
+			}
+			.news-bottom{
+				background-image: url(img/手柄.png);
+			}
+			.news-right{
+				background-image: url(img/xbox.png);
+			}
+		</style>
+	</head>
+
+	<body>	
+		<div id="top">
+			<div class="container">
+				<div class="top-grid">
+					<ul>
+						<li>
+							<i class="gridiocn gridiocn-mail"></i>
+							<a href="#">@example.com</a>
+						</li>
+						<li>
+							<i class="gridiocn gridiocn-phone"></i>
+							1234567890
+						</li>
+						<li>
+							<!--<i class="gridiocn gridiocn-login"></i>-->
+							<a href="登录.html">登录</a>
+						</li>
+						<li>
+							<!--<i class="gridiocn gridiocn-register"></i>-->
+							<a href="注册.html">注册</a>
+						</li>
+					</ul>
+				</div>
+				<div class="top-nav">
+					<div class="top-nav-left">
+						<h1>电&nbsp;玩&nbsp;网&nbsp;上&nbsp;商&nbsp;城</h1>
+						<span>享&nbsp;受&nbsp;游&nbsp;戏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为&nbsp;玩&nbsp;家&nbsp;而&nbsp;生</span>
+					</div>
+				</div>
+				<div class="top-nav-right">
+					<ul>
+						<li><a href="#">主页</a></li>
+						<li><a href="#">游戏主机</a></li>
+						<li><a href="#">PlayStation游戏</a></li>
+						<li><a href="#">XBOX游戏</a></li>
+						<li><a href="#">配件</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div id="banner">
+			<img src="img/banner.png" alt="" />
+			<div class="banner-content">
+				<span>PlayStation&nbsp;&nbsp;o&nbsp;&nbsp;</span>
+				<span class="banner-right">r&nbsp;&nbsp;&nbsp;Xbox&nbsp;?</span>
+			</div>
+			
+		</div>
+		<div id="shownews">
+			<div id="shownews-pic">
+				<div class="news news-left">
+				
+				</div>
+				<div class="shownews-white"></div>
+				<div class="news">
+					<div class="new-top"></div>
+					<div class="news-bottom"></div>
+				</div>
+				<div class="shownews-white"></div>
+				<div class="news news-right">
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+
+</html>

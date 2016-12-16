@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-family: "微软雅黑";
+			}
+			
+			#span1 {
+				height: 100px;
+				width: 100px;
+				background-color: yellow;
+			}
+			
+			#main {
+				width: 1400px;
+				height: 900px;
+				background: url(img/login_ban.png) no-repeat;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			#adv {
+				position: absolute;
+				top: 154px;
+				left: 156px;
+				font-size: 35px;
+			}
+			
+			#login {
+				position: absolute;
+				color: white;
+				left: 150px;
+				top: 418px;
+				width: 368px;
+				height: 150px;
+				border: 1px solid gainsboro;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.6);
+				padding-top: 40px;
+			}
+			
+			#login input {
+				height: 25px;
+			}
+			
+			button {
+				height: 30px;
+				width: 60px;
+				color: white;
+				background: darkred;
+			}
+		</style>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#but1").click(function() {
+					var name = $(".username:first").val();
+					var password = $(".pwd:first").val();
+					var flag = false;
+					$.ajax({
+						type: "post",
+						url: "http://10.2.153.112:8888/check",
+						async: false,
+						data: {
+							"name": name,
+							"password": password
+						},
+						success: function(data) {
+							if(data) {
+								sessionStorage.setItem("username", name);
+								flag = true;
+							} else {
+								alert("登录失败");
+							}
+						}
+					});
+					if(flag) {
+						$.ajax({
+							type: "get",
+							url: "http://10.2.153.112:8888/userid",
+							async: false,
+							data: {
+							"username": name
+							},
+							success: function(data) {
+								var userid = parseInt(data.argid);
+								sessionStorage.setItem("userid",userid);
+//								alert(sessionStorage.getItem("userid")+1);
+								location.href = "首页主体.html";
+							}
+						});
+					}
+				});
+
+				$("#but2").click(function() {
+					location.href = "注册.html";
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="main">
+			<div id="adv">
+				<h1>全 新 上 市！</h1>
+			</div>
+			<div id="login">
+
+				<span>用户名&nbsp;</span><input type="text" class="username" id="input1" /><span id="span1"></span><br /><br />
+				<span>&nbsp;密码&nbsp;&nbsp;&nbsp;</span><input type="password" class="pwd" /><br /><br />
+				<button id="but1">登&nbsp;&nbsp;录</button>
+				<button id="but2">注&nbsp;&nbsp;册</button>
+			</div>
+		</div>
+	</body>
+
+</html>
